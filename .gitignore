@@ -16,6 +16,8 @@ node_modules/
 **/runs/
 *.log
 *.pid
+.DS_Store
+.claude/
 
 # Generated agent workspace artifacts.
 **/anserini-*-fatjar.jar
