@@ -35,7 +35,7 @@ class RunnerLoggingTests(unittest.IsolatedAsyncioTestCase):
                         "import json, pathlib, sys",
                         "prompt = sys.argv[-1]",
                         "if 'Before the benchmark implementation task' in prompt:",
-                        "    pathlib.Path('.1shot-gym-rewrites/PRD.md').write_text('rewritten prd\\n', encoding='utf-8')",
+                        "    pathlib.Path('.1shot-bench-rewrites/PRD.md').write_text('rewritten prd\\n', encoding='utf-8')",
                         "    delta = 'rewrite complete\\n'",
                         "else:",
                         "    pathlib.Path('implementation-prompt.txt').write_text(prompt, encoding='utf-8')",

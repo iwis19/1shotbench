@@ -1,5 +1,5 @@
 {
-  "name": "1shot-gym-llm-judge",
+  "name": "1shot-bench-llm-judge",
   "private": true,
   "type": "module",
   "dependencies": {

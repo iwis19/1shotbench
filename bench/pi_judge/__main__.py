@@ -19,7 +19,7 @@ DEFAULT_PI_CODEX_FAST_THINKING = "low"
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="1ShotGym Pi judge for web apps")
+    parser = argparse.ArgumentParser(description="1ShotBench Pi judge for web apps")
     parser.add_argument("--project", required=True, help="Path to the coding agent workspace")
     parser.add_argument(
         "--features",

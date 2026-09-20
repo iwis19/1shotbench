@@ -116,7 +116,7 @@ Statuses are process-level statuses. `completed` means Pi exited with code `0`; 
 
 ## Metrics
 
-1ShotGym records wall-clock duration and process status for every model. New runs execute Pi in JSON event mode and parse final assistant `usage` fields from `message_end` events. Raw Pi events are saved per model as `events.jsonl`, while readable output remains in `stdout.log`.
+1ShotBench records wall-clock duration and process status for every model. New runs execute Pi in JSON event mode and parse final assistant `usage` fields from `message_end` events. Raw Pi events are saved per model as `events.jsonl`, while readable output remains in `stdout.log`.
 
 Older runs made before JSON event parsing may show zero token and cost fields because they were run with `--no-session` and text output did not include usage.
 

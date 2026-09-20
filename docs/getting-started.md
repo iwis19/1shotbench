@@ -31,7 +31,7 @@ Pi stores login credentials in:
 ~/.pi/agent/auth.json
 ```
 
-For API keys, either use Pi's `/login` flow, edit `~/.pi/agent/auth.json`, export environment variables in your shell, or put them in this project's gitignored `.env` file. 1ShotGym loads `.env` before starting each agent process.
+For API keys, either use Pi's `/login` flow, edit `~/.pi/agent/auth.json`, export environment variables in your shell, or put them in this project's gitignored `.env` file. 1ShotBench loads `.env` before starting each agent process.
 
 Common `.env` entries:
 

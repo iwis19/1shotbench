@@ -344,7 +344,7 @@ class PiJudgeRunner(CodexJudgeRunner):
 
         return textwrap.dedent(
             f"""
-            You are the Pi judge for a 1ShotGym web-app evaluation.
+            You are the Pi judge for a 1ShotBench web-app evaluation.
 
             First read `./judge_skill/SKILL.md` and follow it strictly.
 

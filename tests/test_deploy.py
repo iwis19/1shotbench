@@ -24,10 +24,10 @@ from bench.deploy import (
 
 class DeployHarnessTests(unittest.TestCase):
     def test_slug_and_image_names_are_stable_and_safe(self) -> None:
-        self.assertEqual(project_slug_for("frontend", "GPT++"), "1shot-gym-frontend-gpt")
+        self.assertEqual(project_slug_for("frontend", "GPT++"), "1shot-bench-frontend-gpt")
         self.assertEqual(
             image_url_for("LilyJGE", "frontend", "GPT++", "run 1"),
-            "ghcr.io/lilyjge/1shot-gym-frontend-gpt:run-1",
+            "ghcr.io/lilyjge/1shot-bench-frontend-gpt:run-1",
         )
 
     def test_detects_nested_node_app_and_skips_generated_dirs(self) -> None:
@@ -147,12 +147,12 @@ class DeployHarnessTests(unittest.TestCase):
             self.assertEqual([call["argv"][1] for call in docker_calls], ["build", "login", "push"])
             self.assertIn("--platform", docker_calls[0]["argv"])
             self.assertIn("linux/amd64", docker_calls[0]["argv"])
-            self.assertEqual(server.query["imgURL"][0], "ghcr.io/lilyjge/1shot-gym-task-gpt:run-1")
+            self.assertEqual(server.query["imgURL"][0], "ghcr.io/lilyjge/1shot-bench-task-gpt:run-1")
             artifact = json.loads((run_dir / "gpt" / "deployment.json").read_text(encoding="utf-8"))
-            self.assertEqual(artifact["image_url"], "ghcr.io/lilyjge/1shot-gym-task-gpt:run-1")
+            self.assertEqual(artifact["image_url"], "ghcr.io/lilyjge/1shot-bench-task-gpt:run-1")
             self.assertNotIn("secret-token", json.dumps(artifact))
             self.assertNotIn("/deploy/", artifact["deploy_hook_url"].removesuffix("/deploy/<redacted-render-hook>"))
-            self.assertFalse((run_dir / "deploy-staging" / "1shot-gym-task-gpt" / "node_modules").exists())
+            self.assertFalse((run_dir / "deploy-staging" / "1shot-bench-task-gpt" / "node_modules").exists())
 
     def test_failed_docker_build_records_failure_artifact(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

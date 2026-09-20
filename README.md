@@ -1,8 +1,8 @@
-# 1ShotGym
+# 1ShotBench
 
 [![Build and Test](https://github.com/castorini/pi-bench/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/castorini/pi-bench/actions/workflows/build-and-test.yml)
 
-1ShotGym runs the same task prompt through multiple Pi agent workspaces so you can compare how different models behave under the same harness.
+1ShotBench runs the same task prompt through multiple Pi agent workspaces so you can compare how different models behave under the same harness.
 
 The old Codex proxy path has been removed. Implementation agents now run through the `pi` CLI directly, using a small `bench.toml` file inside each model workspace.
 

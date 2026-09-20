@@ -11,7 +11,7 @@ from bench.llm_judge.runner import WebEvalRunner, WebEvalOptions
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="1ShotGym LLM judge for web apps (Playwright evidence + LLM verdicts)"
+        description="1ShotBench LLM judge for web apps (Playwright evidence + LLM verdicts)"
     )
     parser.add_argument(
         "--project",

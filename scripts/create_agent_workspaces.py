@@ -106,7 +106,7 @@ def create_workspaces(task_dir: Path, force: bool) -> list[str]:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Create 1ShotGym model workspace folders for a task."
+        description="Create 1ShotBench model workspace folders for a task."
     )
     parser.add_argument(
         "task_dir",

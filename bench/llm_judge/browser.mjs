@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generic Playwright evidence collector for 1ShotGym web eval.
+ * Generic Playwright evidence collector for 1ShotBench web eval.
  * Reads a JSON job from --job <path> and writes evidence JSON to --output <path>.
  */
 import fs from 'node:fs';

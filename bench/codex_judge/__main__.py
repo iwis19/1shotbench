@@ -11,7 +11,7 @@ from bench.config import ROOT_DIR
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="1ShotGym Codex judge for web apps"
+        description="1ShotBench Codex judge for web apps"
     )
     parser.add_argument("--project", required=True, help="Path to the coding agent workspace")
     parser.add_argument(

@@ -1,6 +1,6 @@
 # Judging Runs
 
-1ShotGym includes three web-app evaluation paths:
+1ShotBench includes three web-app evaluation paths:
 
 - `bench.llm_judge`: Playwright evidence plus an LLM verdict.
 - `bench.codex_judge`: Codex CLI as the evaluator in a disposable copied workspace.

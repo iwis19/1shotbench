@@ -359,7 +359,7 @@ class CodexJudgeRunner:
             app_line = "Start the app from `./app` if needed, using only documented setup/runtime steps."
         return textwrap.dedent(
             f"""
-            You are the Codex judge for a 1ShotGym web-app evaluation.
+            You are the Codex judge for a 1ShotBench web-app evaluation.
 
             First read `./judge_skill/SKILL.md` and follow it strictly.
 

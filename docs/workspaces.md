@@ -82,7 +82,7 @@ It writes missing `bench.toml` files using the current benchmark defaults and co
 
 ## Workspace Isolation
 
-1ShotGym runs each model from its own workspace directory and wraps each Pi subprocess in a platform sandbox. On macOS it uses `sandbox-exec`; on Linux it uses `bwrap` (bubblewrap). The sandbox allows normal process behavior but denies file reads and writes against the other configured model workspace directories.
+1ShotBench runs each model from its own workspace directory and wraps each Pi subprocess in a platform sandbox. On macOS it uses `sandbox-exec`; on Linux it uses `bwrap` (bubblewrap). The sandbox allows normal process behavior but denies file reads and writes against the other configured model workspace directories.
 
 That means a run from `glm-workspace` cannot inspect or modify `kimi-workspace`, `gpt-workspace`, and the other sibling model workspaces for the same task. Preflight fails if neither `sandbox-exec` nor a functional `bwrap` is available, because that isolation cannot be enforced.
 
@@ -90,7 +90,7 @@ This is workspace isolation, not a full container. Agents can still use allowed 
 
 ## Codex-Private Notes
 
-Use `.codex-private/` for notes intended for Codex but not Pi benchmark agents. The directory is gitignored, and 1ShotGym adds it to every generated sandbox profile as a denied read/write path.
+Use `.codex-private/` for notes intended for Codex but not Pi benchmark agents. The directory is gitignored, and 1ShotBench adds it to every generated sandbox profile as a denied read/write path.
 
 Do not put benchmark instructions for Pi agents there. Use task-local files such as `experiments/frontend/PRD.md` for agent-visible task prompts.
 

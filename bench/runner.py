@@ -555,7 +555,7 @@ class BenchmarkRunner:
         stderr_path = model_dir / "task-rewrite.stderr.log"
         events_path = model_dir / "task-rewrite.events.jsonl"
         rewritten_artifact_dir = model_dir / "rewritten-task-files"
-        rewrite_dir = Path(workspace.path) / ".1shot-gym-rewrites"
+        rewrite_dir = Path(workspace.path) / ".1shot-bench-rewrites"
         rewritten_artifact_dir.mkdir(parents=True, exist_ok=True)
         rewrite_dir.mkdir(parents=True, exist_ok=True)
 

@@ -305,10 +305,10 @@ def deploy_hook_for(config: RenderConfig, task_dir: str, model_key: str) -> str 
 
 
 def project_slug_for(task_dir: str, model_key: str) -> str:
-    raw = f"1shot-gym-{task_dir}-{model_key}".lower()
+    raw = f"1shot-bench-{task_dir}-{model_key}".lower()
     slug = re.sub(r"[^a-z0-9._-]+", "-", raw)
     slug = re.sub(r"-{2,}", "-", slug).strip(".-_")
-    return slug[:100].strip(".-_") or "1shot-gym-demo"
+    return slug[:100].strip(".-_") or "1shot-bench-demo"
 
 
 def image_url_for(owner: str, task_dir: str, model_key: str, run_id: str) -> str:
@@ -412,7 +412,7 @@ def trigger_render_deploy_hook(hook_url: str, image_url: str, *, config: RenderC
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Deploy 1ShotGym run outputs")
+    parser = argparse.ArgumentParser(description="Deploy 1ShotBench run outputs")
     parser.add_argument("--run-id", required=True, help="Run id under runs/")
     parser.add_argument("--provider", choices=[DEPLOYMENT_PROVIDER], default=DEPLOYMENT_PROVIDER)
     parser.add_argument(
